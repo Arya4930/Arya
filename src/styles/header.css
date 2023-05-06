@@ -128,39 +128,12 @@ body {
     text-decoration: underline;
 }
 
-.left-section-option-1 {
+.left-section div img {
     border-radius: 5px;
-    height: 25px;
+    height: 30px;
     cursor: pointer;
     margin-top: 3px;
-    margin-right: -5px;
-}
-
-.left-section-option-2 {
-    height: 35px;
-    cursor: pointer;
-    margin-right: -10px;
-    margin-top: 2px;
-}
-
-.left-section-option-3 {
-    height: 25px;
-    cursor: pointer;
-    margin-right: 12px;
-    margin-top: 3px;
-}
-
-.left-section-option-4 {
-    height: 20px;
-    cursor: pointer;
-    margin-top: 3px;
-}
-
-.left-section-option-5 {
-    height: 35px;
-    cursor: pointer;
-    margin-top: 3px;
-    margin-left: 5px;
+    margin-right: 15px;
 }
 
 .copy-tick-image {
@@ -182,8 +155,6 @@ body {
     color: white;
     padding-top: 5px;
     padding-bottom: 5px;
-    padding-right: 5px;
-    padding-left: 5px;
     border-radius: 4px;
     font-size: 12px;
     opacity: 0;
@@ -191,15 +162,13 @@ body {
     pointer-events: none;
     white-space: nowrap;
     z-index: 10;
-    top: 60px;
-
 }
 
-.left-section-option-1-div:hover .tooltip {
+.left-section-option:hover .tooltip {
     opacity: 1;
 }
 
-.header-1 {
+.header-1{
     font-family: 'Open-sans', Arial;
     color: rgba(255, 255, 255, 0.849);
     border-bottom: 1px solid rgb(66, 70, 77);
@@ -212,11 +181,11 @@ body {
 .header-1-containor {
     background-color: rgb(54, 57, 63);
     width: auto;
-    height: 510px;
+    height: 300px;
     margin-left: 50px;
     margin-right: 50px;
     margin-top: 100px;
-    margin-bottom: 5px;
+    margin-bottom: -60px;
     border-radius: 10px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
@@ -224,22 +193,23 @@ body {
 .para-1 {
     width: 560px;
     color: white;
-    font-size: 20px;
+    font-size: 19px;
     margin-top: 30px;
     margin-left: 35px;
+    font-family: Roboto, Arial;
 }
 
 .imaage-container {
     position: relative;
-    top: -450px;
-    left: 620px;
+    top: -250px;
+    left: 700px;
     z-index: 10;
 }
 
 .vscode-img {
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
-    height: 330px;
+    height: 200px;
     z-index: 10;
 }
 
@@ -251,46 +221,21 @@ body {
     border-radius: 10px;
     --border-size: 3px;
     --border-angle: 0turn;
-    width: 91.2vmin;
-    height: 51.5vmin;
-    background-image: conic-gradient(from var(--border-angle),
-            transparent,
-            transparent 50%,
-            transparent),
-        conic-gradient(from var(--border-angle), transparent 20%, rgb(0, 0, 0), #ffffff);
-    background-size: calc(100% - (var(--border-size) * 2)) calc(100% - (var(--border-size) * 2)),
-        cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-
-    animation: bg-spin 10s linear infinite;
-}
-
-.imaage-container:hover .box {
-    animation-play-state: paused;
-}
-
-@keyframes bg-spin {
-    to {
-        --border-angle: 1turn;
-    }
-}
-
-@property --border-angle {
-    syntax: "<angle>";
-    inherits: true;
-    initial-value: 0turn;
+    width: 54vmin;
+    height: 31vmin;
+    background-color: rgb(179, 180, 180);
 }
 
 .quote-1-div {
     background-color: rgb(32, 34, 37);
-    padding-left: 30px;
-    padding-top: 10px;
-    width: 400px;
+    padding-left: 20px;
+    padding-top: 20px;
+    width: 500px;
+    height: 80px;
     border-radius: 10px;
     padding-bottom: 10px;
+    font-size: 23px;
 }
-
 .header-1-anchor,
 .header-2-anchor,
 .header-3-anchor,
@@ -390,9 +335,50 @@ body {
         opacity: 1;
     }
 }
+
 .footer-grid {
     position: absolute;
     top: 480px;
     right: 300px;
     cursor: pointer;
+}
+
+.active {
+    opacity: 1;
+}
+
+@keyframes fade-bottom {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-left {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-right {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
